@@ -24,6 +24,8 @@
             text-decoration: line-through;
         }
     </style>
+
+    	
 </head>
 <body>
     <div id="app">
@@ -61,7 +63,7 @@
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
-                                    <img src="{{asset('/storage/'.auth()->user()->image)}}" class="user-image" alt="">
+                                    <img src="{{asset('/storage/'.auth()->user()->image) }}" class="user-image" alt="">
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
@@ -89,5 +91,7 @@
             </div>
         </main>
     </div>
+
+
 </body>
 </html>

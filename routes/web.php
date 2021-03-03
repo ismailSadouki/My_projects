@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return  redirect('login');
+    return  redirect('/projects');
 });
 
 Auth::routes();

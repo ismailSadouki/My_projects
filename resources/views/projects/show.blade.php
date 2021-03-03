@@ -37,7 +37,21 @@
 
                 </div>
             </div>
-            @include('projects.footer')                        
+
+
+            <div class="card-footer bg-transparent" dir="rtl">
+                <div class="d-flex">
+                    @include('projects.footer')                        
+                    <div class="d-flex align-items-center mr-auto">
+                        <form action="{{$project->id}}" method="Post">
+                            @method('DELETE')
+                            @csrf
+                            <input type="submit" value="حذف" class="btn btn-danger">
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- end footer -->
+
 
         </div>
 
@@ -91,6 +105,10 @@
                 <input type="text" name="body" class="form-control p-2 ml-2 border-0" placeholder="اضف مهمة جديدة">
                 <button type="submit" class="btn btn-primary">اضافة</button>
             </form>
+            @error('body')
+                {{-- <div class="alert alert-danger">{{$message}}</div> --}}
+                <div class="alert alert-danger">لا يمكنك ترك هذا الحقل فارغا</div>
+            @enderror
         </div>
     </div>
 </section>

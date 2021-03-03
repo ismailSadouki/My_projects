@@ -6,7 +6,7 @@
     <div class="col-md-6 mx-auto">
         <div class="card p-5">
             <div class="text-center">
-                <img src="{{asset('storage'.auth()->user()->image)}}" alt="" width="82px" height="82px">
+                <img src="{{asset('/storage/'.auth()->user()->image)}}" alt="" width="82px" height="82px">
                 <h3 class="mt-4 font-weight-bold">
                     {{auth()->user()->name}}
                 </h3>
